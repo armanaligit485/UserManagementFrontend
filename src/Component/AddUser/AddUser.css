@@ -1,0 +1,311 @@
+.add-user-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.add-user-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+}
+
+.add-user-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.add-user-icon-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background-color: #e0f2fe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-user-icon {
+    color: #0ea5e9;
+    font-size: 1.8rem;
+}
+
+.add-user-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.add-user-subtitle {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.add-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.add-user-form-group {
+    position: relative;
+}
+
+.add-user-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.add-user-input-container {
+    position: relative;
+}
+
+.add-user-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.add-user-input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    outline: none;
+    background-color: #f8fafc;
+}
+
+.add-user-input:focus {
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+    background-color: white;
+}
+
+.add-user-input-error {
+    border-color: #ef4444;
+}
+
+.add-user-input-error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.add-user-input-valid {
+    border-color: #10b981;
+}
+
+.add-user-input-valid:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.add-user-availability-icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+}
+
+.add-user-availability-message {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.add-user-error-message {
+    display: block;
+    font-size: 0.8rem;
+    color: #ef4444;
+    margin-top: 0.3rem;
+}
+
+.password-strength-meter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.strength-bar {
+    height: 4px;
+    width: 100%;
+    background-color: #e2e8f0;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.strength-bar.active {
+    background-color: #10b981;
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    color: #64748b;
+    min-width: 80px;
+    text-align: right;
+}
+
+.password-hints {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.password-hints span {
+    display: flex;
+    align-items: center;
+}
+
+.text-success {
+    color: #10b981;
+}
+
+.text-error {
+    color: #ef4444;
+}
+
+.add-user-button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #0ea5e9;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.add-user-button:hover {
+    background-color: #0284c7;
+}
+
+.add-user-button:disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+.add-user-spinner {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+.add-user-spinner-small {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border-top-color: #0ea5e9;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+    .add-user-card {
+        padding: 1.5rem;
+    }
+
+    .password-hints {
+        grid-template-columns: 1fr;
+    }
+}
+/* Password Strength Meter Styles */
+.password-strength-container {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    gap: 10px;
+  }
+  
+  .password-strength-meter {
+    display: flex;
+    gap: 4px;
+    flex-grow: 1;
+  }
+  
+  .strength-bar {
+    height: 4px;
+    flex-grow: 1;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .strength-bar.strength-1 {
+    background-color: #ff4d4f;
+  }
+  .strength-bar.strength-2 {
+    background-color: #faad14;
+  }
+  .strength-bar.strength-3 {
+    background-color: #52c41a;
+  }
+  .strength-bar.strength-4 {
+    background-color: #1890ff;
+  }
+  
+  .strength-text {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .strength-text.strength-0 { color: #ff4d4f; }
+  .strength-text.strength-1 { color: #ff4d4f; }
+  .strength-text.strength-2 { color: #faad14; }
+  .strength-text.strength-3 { color: #52c41a; }
+  .strength-text.strength-4 { color: #1890ff; }
+  
+  /* Password Hints */
+  .password-hints {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  
+  .password-hints span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .hint-valid {
+    color: #52c41a;
+  }
+  .hint-invalid {
+    color: #d9d9d9;
+  }
