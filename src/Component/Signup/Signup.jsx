@@ -100,7 +100,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-          'http://localhost:3000/auth/signup',
+          'https://usermanagementbackend-v9en.onrender.com/auth/signup',
           {
             username: formData.username,
             password: formData.password
