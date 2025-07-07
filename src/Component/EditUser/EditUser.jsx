@@ -27,7 +27,7 @@ const EditUser = () => {
     setIsLoading(true);
     try {
       const { data } = await axios.post(
-          "http://localhost:3000/users/search",
+          "https://usermanagementbackend-v9en.onrender.com/users/search",
           { id },
           {
             headers: {
@@ -72,7 +72,7 @@ const EditUser = () => {
     setIsCheckingUsername(true);
     try {
       const { data } = await axios.post(
-          "http://localhost:3000/users/search",
+          "https://usermanagementbackend-v9en.onrender.com/users/search",
           { username },
           {
             headers: {
@@ -164,7 +164,7 @@ const EditUser = () => {
       };
 
       await axios.put(
-          `http://localhost:3000/users/${id}`,
+          `https://usermanagementbackend-v9en.onrender.com/users/${id}`,
           payload,
           {
             headers: {
