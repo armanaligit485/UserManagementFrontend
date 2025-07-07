@@ -87,7 +87,7 @@ const AddUser = () => {
     setIsCheckingUsername(true);
     try {
       const { data } = await axios.post(
-          "http://localhost:3000/users/search",
+          "https://usermanagementbackend-v9en.onrender.com/users/search",
           { username },
           {
             headers: {
@@ -147,7 +147,7 @@ const AddUser = () => {
 
     try {
       await axios.post(
-          "http://localhost:3000/users",
+          "https://usermanagementbackend-v9en.onrender.com/users",
           formData,
           {
             headers: {
