@@ -19,7 +19,7 @@ const ListUser = () => {
     setIsLoading(true);
     try {
       const { data } = await axios.post(
-          "http://localhost:3000/users/search",
+          "https://usermanagementbackend-v9en.onrender.com/users/search",
           { [searchField]: searchQuery },
           {
             headers: {
@@ -47,7 +47,7 @@ const ListUser = () => {
 
     try {
       await axios.delete(
-          `http://localhost:3000/users/${userId}`,
+          `https://usermanagementbackend-v9en.onrender.com/users/${userId}`,
           {
             headers: {
               'Authorization': `Basic ${localStorage.getItem("base64Credentials")}`
